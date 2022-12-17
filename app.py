@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 from io import BytesIO
-import vnquant.data as dt
 
 	
 
