@@ -26,7 +26,7 @@ with col1:
 	
 with col2:
 	end_date = st.date_input('End Date') # it defaults to current date
-MCK_string = st.text_input('Nhập mã chứng khoán mà không có dấu cách ví dụ: "TCB", "SSI", "VHC", "VHM", "HBC", "FPT", "HPG"','')
+MCK_string = st.text_input('Nhập mã chứng khoán mà không có dấu cách ví dụ: TCB,SSI,VHC,VHM,HBC,FPT,HPG','')
 MCK = MCK_string.split(',')
 loader = dt.DataLoader(MCK, str(start_date),str(end_date), minimal=True, data_source = "cafe")
 data= loader.download()
