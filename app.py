@@ -1,4 +1,4 @@
-git clone https://github.com/tienchuong/vnquantdatadownload
+gh repo clone phamdinhkhanh/vnquant
 import streamlit as st
 from pandas_datareader.data import DataReader
 from pypfopt.discrete_allocation import DiscreteAllocation, get_latest_prices
