@@ -1,3 +1,4 @@
+!git clone https://github.com/tienchuong/vnquantdatadownload
 import streamlit as st
 from pandas_datareader.data import DataReader
 from pypfopt.discrete_allocation import DiscreteAllocation, get_latest_prices
@@ -13,7 +14,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 from io import BytesIO
-import vnquantdatadownload.vnquant.data as dt 
+import vnquant.data as dt 
 	
 
 st.set_page_config(page_title = "Nguyen Quang Bac's Stock Portfolio Optimizer", layout = "wide")
