@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 from io import BytesIO
-from vnquantdatadownload import vnquant.data 
+import vnquantdatadownload/vnquant/data as dt
 	
 
 st.set_page_config(page_title = "Nguyen Quang Bac's Stock Portfolio Optimizer", layout = "wide")
@@ -28,7 +28,7 @@ with col2:
 	end_date = st.date_input('End Date') # it defaults to current date
 MCK_string = st.text_input('Nhập mã chứng khoán mà không có dấu cách ví dụ: TCB,SSI,VHC,VHM,HBC,FPT,HPG','')
 MCK = MCK_string.split(',')
-loader = vnquant.data.DataLoader(MCK, str(start_date),str(end_date), minimal=True, data_source = "cafe")
+loader = dt.DataLoader(MCK, str(start_date),str(end_date), minimal=True, data_source = "cafe")
 data= loader.download()
 data=data.stack()
 data=data.reset_index()
